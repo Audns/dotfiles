@@ -1,0 +1,65 @@
+/* Base styling */
+#waybar {
+    background: rgba(30, 30, 30, 0.8); /* Dark transparent background */
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-family: "Noto Sans";
+    font-size: 16px;
+}
+
+#workspaces button {
+    border: none;
+    background: transparent;
+    color: #eeeeee;
+    padding: 1.8px 16px;
+    margin: 2px 4px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+#workspaces button.active {
+    background-color: #5294e2; /* Highlight active workspace */
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #5294e2; /* Highlight active workspace */
+    color: #ffffff;
+}
+
+/* Centered clock module */
+#clock {
+    padding: 4 10px;
+    color: #eeeeee;
+}
+
+/* Right-side modules (CPU, Memory, etc.) */
+#backlight, #pulseaudio, #battery, #tray {
+    padding: 4 10px;
+    color: #eeeeee;
+}
+
+/* Tooltip / hover hints */
+.tooltip {
+    font-size: 12px;
+    background: rgba(50, 50, 50, 0.9);
+    color: #eeeeee;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+/* General spacing between elements */
+module-left, module-center, module-right {
+}
+
+/* Rounded rectangle containers with gap */
+.waybar-module {
+    border-radius: 8px;
+    margin: 2px 0;
+}
+#custom-notification {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  color: #eeeeee;
+  padding: 0 10px;
+}
