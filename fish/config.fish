@@ -28,6 +28,7 @@ alias ls='eza --color=always --icons=always --group-directories-first'
 alias lla='eza --color=always --icons=always -al --group-directories-first'
 alias ip='ip -c'
 alias grep='rg'
+alias hx='helix'
 
 # Auto-launch tmux if not already in a tmux session and in an interactive terminal
 # if command -q tmux

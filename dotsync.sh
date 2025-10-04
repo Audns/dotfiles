@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the directories to sync (relative to ~/.config/)
-dirs=("fish" "ghostty" "fuzzel" "waybar" "nvim" "hypr")
+dirs=("fish" "ghostty" "fuzzel" "waybar" "nvim" "hypr" "helix")
 # Base source and destination paths
 src_base="$HOME/.config"
 dst_base="$HOME/second/codespace/dotfiles"
