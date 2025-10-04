@@ -13,7 +13,7 @@
   ],
   "modules-right": [
     "tray",
-    "pulseaudio"
+    "pulseaudio",
   ],
   // "pulseaudio": {
   //   "format": "{volumn}& {icon}",
@@ -78,22 +78,22 @@
   //   "interval": 10,
   //   "format": " {used}/{total}"
   // },
-  "backlight": {
-    // "format": " {percent}%",
-    // "format": " {percent}%",
-    "format": "Brt: {percent}%",
-    "on-click-middle": "brightnessctl set 9%",
-    "format-icons": [
-      "󰃚",
-      "󰃛",
-      "󰃜",
-      "󰃝",
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ],
-    "scroll-step": 1
-  },
+  // "backlight": {
+  //   // "format": " {percent}%",
+  //   // "format": " {percent}%",
+  //   "format": "Brt: {percent}%",
+  //   "on-click-middle": "brightnessctl set 9%",
+  //   "format-icons": [
+  //     "󰃚",
+  //     "󰃛",
+  //     "󰃜",
+  //     "󰃝",
+  //     "󰃞",
+  //     "󰃟",
+  //     "󰃠"
+  //   ],
+  //   "scroll-step": 1
+  // },
   "pulseaudio": {
     "format": "Vol: {volume}%",
     "format-muted": "Vol: muted",
@@ -165,13 +165,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  }
-  // "hyprland/workspaces": {
-  //   "format": "{name}",
-  //   "format-occupied": "{name} ({windowCount})",
-  //   "format-focused": "● {name} ●",
-  //   "format-empty": "○ {name} ○",
-  //   "max-workspaces": 10,
-  //   "on-click": "hyprctl dispatch workspace {name}"
-  // }
+  },
 }

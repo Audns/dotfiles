@@ -43,6 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 # Colors
 font-size = 16
+font-family = JetBrainsMono
 theme = TokyoNight
 #theme = Adventure
 shell-integration = fish

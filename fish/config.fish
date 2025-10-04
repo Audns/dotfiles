@@ -37,3 +37,14 @@ alias grep='rg'
 # end
 set -gx QT_QPA_PLATFORMTHEME qt5ct
 set -x EDITOR helix
+
+# GEMINI_API_KEY
+if command -q pass
+    set -gx GEMINI_API_KEY (pass gemini/api-key)
+end
+# set -gx GEMINI_API_KEY (pass gemini/api-key)
+
+# uv
+fish_add_path "/home/audns/.local/bin"
+# Change the cache dir of uv
+export UV_CACHE_DIR=/home/audns/second/uv-cache
