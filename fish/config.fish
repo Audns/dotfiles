@@ -40,9 +40,9 @@ set -gx QT_QPA_PLATFORMTHEME qt5ct
 set -x EDITOR helix
 
 # GEMINI_API_KEY
-if command -q pass
-    set -gx GEMINI_API_KEY (pass gemini/api-key)
-end
+# if command -q pass
+#     set -gx GEMINI_API_KEY (pass gemini/api-key)
+# end
 # set -gx GEMINI_API_KEY (pass gemini/api-key)
 
 # uv

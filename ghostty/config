@@ -45,7 +45,6 @@
 font-size = 16
 font-family = JetBrainsMono
 theme = TokyoNight
-#theme = Adventure
 shell-integration = fish
 # window-save-state = always
 # window-decoration = auto
