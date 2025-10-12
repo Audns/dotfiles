@@ -11,4 +11,4 @@ for dir in "${dirs[@]}"; do
     rsync -rv --exclude '.git' "$src_base/$dir/" "$dst_base/$dir/"
 done
 
-rsync -rv --exclude '.git' "~/.tmux.conf" "dst_base/$dir/"
+rsync -rv --exclude '.git' ~/.tmux.conf "$dst_base/$dir/"
