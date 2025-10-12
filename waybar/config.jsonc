@@ -6,25 +6,13 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    // "cpu",
-    // "memory",
     "privacy",
-    "custom/notification",
     "clock"
   ],
   "modules-right": [
     "tray",
-    "pulseaudio",
+    "pulseaudio"
   ],
-  // "pulseaudio": {
-  //   "format": "{volumn}& {icon}",
-  //   "format-icons": {
-  //     "default": [
-  //       "audio>"
-  //     ]
-  //   },
-  //   "scroll-step": 5
-  // },
   "privacy": {
     "icon-spacing": 4,
     "icon-size": 18,
@@ -35,11 +23,6 @@
         "tooltip": false,
         "tooltip-icon-size": 24
       },
-      // {
-      //   "type": "audio-out",
-      //   "tooltip": false,
-      //   "tooltip-icon-size": 24
-      // },
       {
         "type": "audio-in",
         "tooltip": false,
@@ -71,30 +54,6 @@
     "reverse-direction": false,
     "show-passive-items": false
   },
-  // "cpu": {
-  //   "interval": 10,
-  //   "format": " {usage}%"
-  // },
-  // "memory": {
-  //   "interval": 10,
-  //   "format": " {used}/{total}"
-  // },
-  // "backlight": {
-  //   // "format": " {percent}%",
-  //   // "format": " {percent}%",
-  //   "format": "Brt: {percent}%",
-  //   "on-click-middle": "brightnessctl set 9%",
-  //   "format-icons": [
-  //     "󰃚",
-  //     "󰃛",
-  //     "󰃜",
-  //     "󰃝",
-  //     "󰃞",
-  //     "󰃟",
-  //     "󰃠"
-  //   ],
-  //   "scroll-step": 1
-  // },
   "pulseaudio": {
     "format": "Vol: {volume}%",
     "format-muted": "Vol: muted",
@@ -102,69 +61,18 @@
     "format-source-muted": "",
     "scroll-step": 3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pavucontrol",
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█",
-      "█",
-      "█"
-    ]
+    "on-click-middle": "pavucontrol"
   },
   "battery": {
     "interval": 3,
-    "format-icons": [
-      "󰂃",
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂",
-      "󰁹"
-    ],
     "format": "Bty: {capacity}%",
     "format-charging": "Bty(charging):{capacity}"
-    // "format-plugged": "Bty(AC):{capacity}"
   },
   "clock": {
     "interval": 60,
     "format": "{:%a, %b%d, %H:%M}",
     "tooltip": false,
-    "format-icons": {
-      "notification": " <span foreground='red'><sup></sup></span>",
-      "none": " ",
-      "dnd-notification": " <span foreground='red'><sup></sup></span>",
-      "dnd-none": " "
-    },
     "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-middle": "swaync-client -d -sw",
     "escape": true
-  },
-  "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": " <span foreground='red'><sup></sup></span>",
-      // "none": " ",
-      "dnd-notification": "DND",
-      "dnd-none": "DND"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
+  }
 }
