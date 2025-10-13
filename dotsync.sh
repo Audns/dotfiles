@@ -4,7 +4,7 @@
 dirs=("fish" "ghostty" "fuzzel" "waybar" "nvim" "hypr" "helix" "mako")
 # Base source and destination paths
 src_base="$HOME/.config"
-dst_base="$HOME/second/codespace/dotfiles"
+dst_base="$PWD"
 
 # Loop over directories and sync each
 for dir in "${dirs[@]}"; do
