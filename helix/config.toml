@@ -6,6 +6,9 @@ select = "underline"
 
 [editor]
 true-color = true
+bufferline = "multiple"
+line-number = "relative"
+cursorline = true
 
 [editor.file-picker]
 hidden = false
