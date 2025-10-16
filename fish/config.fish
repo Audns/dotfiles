@@ -49,3 +49,6 @@ set -x EDITOR helix
 fish_add_path "/home/audns/.local/bin"
 # Change the cache dir of uv
 export UV_CACHE_DIR=/home/audns/second/uv-cache
+
+# Export .rustup toolchains to environment variables
+set -x PATH $HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin $PATH
