@@ -29,6 +29,7 @@ alias lla='eza --color=always --icons=always -al --group-directories-first'
 alias ip='ip -c'
 alias grep='rg'
 alias hx='helix'
+alias watchtex='~/second/codespace/watchtex/watchtex.sh'
 
 # Auto-launch tmux if not already in a tmux session and in an interactive terminal
 # if command -q tmux
