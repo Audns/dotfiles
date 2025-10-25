@@ -1,0 +1,43 @@
+# Font
+font-size = 16
+font-style = Regular
+font-family = JetBrainsMono
+
+# Themes
+theme = TokyoNight
+
+# Window
+window-theme = ghostty
+window-title-font-family = JetBrainsMono
+window-height = 32
+window-width = 110
+# window-padding-x = 10
+# window-save-state = always
+# window-decoration = auto
+# window-padding-balance = true
+# window-padding-color = extend
+window-vsync = true
+# working-directory = inherit
+window-inherit-working-directory = false
+window-inherit-font-size = true
+confirm-close-surface = false
+resize-overlay = never
+gtk-toolbar-style = flat
+app-notifications = no-clipboard-copy
+desktop-notifications = true
+alpha-blending = linear
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
+shell-integration-features = no-cursor
+shell-integration = fish
+
+# Clipboard
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = true
+copy-on-select = true
+
+# SSH session terminfo
+shell-integration-features = ssh-env

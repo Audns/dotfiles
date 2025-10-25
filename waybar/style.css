@@ -1,0 +1,53 @@
+#waybar {
+    background: rgba(30, 30, 30, 0.8); 
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-family: "Noto Sans";
+    font-size: 16px;
+}
+
+#workspaces button {
+    border: none;
+    background: transparent;
+    color: #eeeeee;
+    padding: 1.8px 16px;
+    margin: 2px 4px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+#workspaces button.active {
+    background-color: #5294e2;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #5294e2;
+    color: #ffffff;
+}
+
+#clock {
+    padding: 4px 10px;
+    color: #eeeeee;
+}
+
+#backlight, #pulseaudio, #battery, #tray {
+    padding: 4px 10px;
+    color: #eeeeee;
+}
+
+.tooltip {
+    font-size: 12px;
+    background: rgba(50, 50, 50, 0.9);
+    color: #eeeeee;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+module-left, module-center, module-right {
+}
+
+.waybar-module {
+    border-radius: 8px;
+    margin: 2px 0;
+}

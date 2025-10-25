@@ -1,0 +1,34 @@
+# Global settings for all notifications
+# Set font for notifications
+font=Noto Sans Regular 15
+background-color=#1E1E2EFF
+text-color=#E6E6E6FF
+border-color=#CBA6F7FF
+border-size=1
+border-radius=10
+padding=15,10
+margin=10
+anchor=top-right
+layer=overlay
+width=400
+height=1000
+default-timeout=5000
+markup=1
+
+# High urgency notifications
+[urgency=high]
+background-color=#45475AFF
+text-color=#E6E6E6FF
+border-color=#CBA6F7FF
+border-size=2
+
+# Low urgency notifications
+[urgency=low]
+background-color=#1E1E2EFF
+text-color=#89B4FAFF
+border-color=#CBA6F7FF
+border-size=1
+
+# Normal mode settings
+[mode=normal]
+progress-color=#89B4FAFF

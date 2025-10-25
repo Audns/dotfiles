@@ -1,0 +1,23 @@
+theme = "tokyonight"
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor]
+true-color = true
+bufferline = "multiple"
+line-number = "relative"
+cursorline = true
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "disable"
+max-wrap = 5
+
+[editor.file-picker]
+hidden = false
+git-ignore = true
+ignore = true
