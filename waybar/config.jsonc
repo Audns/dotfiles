@@ -12,6 +12,7 @@
   ],
   "modules-right": [
     "tray",
+    "network",
     "pulseaudio"
   ],
   "privacy": {
@@ -49,12 +50,8 @@
     ]
   },
   "tray": {
-    // "max-icon-size": 30,
     "spacing": 4,
     "icon-size": 16
-    // "tooltip": false,
-    // "reverse-direction": false,
-    // "show-passive-items": false
   },
   "pulseaudio": {
     "format": "Vol: {volume}%",
@@ -76,5 +73,14 @@
     "tooltip": false,
     "return-type": "json",
     "escape": true
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": "{ifname}: {essid}",
+    "format-ethernet": "{ifname}: {essid}",
+    "format-disconnected": "Disconnected",
+    "tooltip": true,
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "tooltip-format-wifi": "{ifname}: {ipaddr}; Strength: {signalStrength}%; Bandwidth: {bandwidthTotalBits}"
   }
 }
