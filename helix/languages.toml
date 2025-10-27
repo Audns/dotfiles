@@ -1,3 +1,7 @@
 [language-server.docker-langserver]
 command = "docker-language-server"
 args = ["start", "--stdio"]
+
+[language-server.docker-compose-langserver]
+command = "docker-language-server"
+args = ["start", "--stdio"]
