@@ -5,3 +5,7 @@ args = ["start", "--stdio"]
 [language-server.docker-compose-langserver]
 command = "docker-language-server"
 args = ["start", "--stdio"]
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint"
+args = ["start", "--stdio"]
