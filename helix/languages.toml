@@ -9,3 +9,22 @@ args = ["start", "--stdio"]
 [language-server.golangci-lint-lsp]
 command = "golangci-lint"
 args = ["start", "--stdio"]
+
+[[language]]
+name = "latex"
+scope = "source.latex"
+file-types = ["tex"]
+roots = []
+auto-format = true
+
+[language.formatter]
+command = "latexindent"
+args = ["-w", "-s", "--local"]
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[language.formatter]
+command = "rustfmt"
+args = ["--emit=stdout"]
