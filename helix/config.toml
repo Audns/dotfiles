@@ -36,6 +36,9 @@ left = ["mode", "spinner", "version-control", "file-name"]
 [editor.lsp]
 display-progress-messages = true
 
+[keys.normal]
+"C-S-s" = [":w"]
+
 [keys.insert]
 "A-n" = "normal_mode"
 "A-l" = "move_char_right"
@@ -47,3 +50,4 @@ display-progress-messages = true
 "A-u" = "undo"
 "A-a" = "insert_at_line_end"
 "A-i" = "insert_at_line_start"
+"C-S-s" = ["normal_mode" ,":w"]
