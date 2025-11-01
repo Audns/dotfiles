@@ -13,7 +13,7 @@ args = ["start", "--stdio"]
 [[language]]
 name = "latex"
 scope = "source.latex"
-file-types = ["tex"]
+file-types = ["tex", "cls"]
 roots = []
 auto-format = true
 
