@@ -81,7 +81,7 @@
     "format-disconnected": "Disconnected",
     "tooltip": true,
     "tooltip-format": "{ifname}: {ipaddr}",
-    "tooltip-format-ethernet": "{ifname}: {ipaddr}",
-    "tooltip-format-wifi": "{ifname}: {ipaddr}; Strength: {signalStrength}%; Bandwidth: {bandwidthTotalBits}"
+    "tooltip-format-ethernet": "{ipaddr} DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
+    "tooltip-format-wifi": "{ipaddr} Strength: {signalStrength}%; DN: {bandwidthDownBytes} UP: {bandwidthUpBytes};"
   }
 }
