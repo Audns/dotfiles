@@ -82,6 +82,6 @@
     "tooltip": true,
     "tooltip-format": "{ifname}: {ipaddr}",
     "tooltip-format-ethernet": "{ipaddr} DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
-    "tooltip-format-wifi": "{ipaddr} Strength: {signalStrength}%; DN: {bandwidthDownBytes} UP: {bandwidthUpBytes};"
+    "tooltip-format-wifi": "{ipaddr} Strength: {signalStrength}%; DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}"
   }
 }
