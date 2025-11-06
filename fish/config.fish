@@ -11,6 +11,5 @@ starship init fish | source
 alias pparu='proxychains4 -q paru'
 alias vmrestart='sudo modprobe -v vmmon; sudo modprobe vmnet; sudo systemctl start vmware-networks.service; sudo systemctl start vmtoolsd.service'
 alias ls='eza --color=always --icons=always --group-directories-first'
-alias lla='eza --color=always --icons=always -al --group-directories-first'
 alias ip='ip -c'
 alias hx='helix'
