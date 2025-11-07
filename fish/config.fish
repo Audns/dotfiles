@@ -2,7 +2,7 @@
 source $HOME/dotfiles/fish/local.fish
 
 # Remove the greeting prompt
-set -U fish_greeting ""
+set -u fish_greeting ""
 
 # Initialize starship
 starship init fish | source
