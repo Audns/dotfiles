@@ -10,14 +10,13 @@ bufferline = "multiple"
 line-number = "relative"
 cursorline = true
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
-end-of-line-diagnostics = "hint"
 auto-format = true
 completion-timeout = 5
 completion-trigger-len = 1
 completion-replace = true
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = "info"
 other-lines = "disable"
 max-wrap = 5
 
