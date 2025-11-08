@@ -16,7 +16,7 @@ completion-trigger-len = 1
 completion-replace = true
 
 [editor.inline-diagnostics]
-cursor-line = "info"
+cursor-line = "hint"
 other-lines = "disable"
 max-wrap = 5
 
