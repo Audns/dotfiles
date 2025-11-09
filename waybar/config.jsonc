@@ -76,12 +76,12 @@
   },
   "network": {
     "interval": 5,
-    "format-wifi": "{ifname}: {essid}",
-    "format-ethernet": "{ifname}: {essid}",
+    "format-wifi": "{ifname}: {signalStrength}%",
+    "format-ethernet": "Ethernet: {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip": true,
     "tooltip-format": "{ifname}: {ipaddr}",
-    "tooltip-format-ethernet": "{ipaddr} DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
-    "tooltip-format-wifi": "{ipaddr} Strength: {signalStrength}%; DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}"
+    "tooltip-format-ethernet": "{ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
+    "tooltip-format-wifi": "{essid} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}"
   }
 }
