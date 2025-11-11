@@ -60,7 +60,7 @@
     "format-source-muted": "",
     "scroll-step": 3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "$TERMINAL -e pulsemixer"
+    "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e pulsemixer\""
   },
   "battery": {
     "interval": 3,
