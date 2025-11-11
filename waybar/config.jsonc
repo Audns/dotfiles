@@ -60,7 +60,7 @@
     "format-source-muted": "",
     "scroll-step": 3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pavucontrol"
+    "on-click-middle": "$TERMINAL -e pulsemixer"
   },
   "battery": {
     "interval": 3,
