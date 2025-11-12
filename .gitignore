@@ -3,4 +3,4 @@ conf.d/
 functions/
 fish_variables
 fish_plugins
-menu
+local-menu

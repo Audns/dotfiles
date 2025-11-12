@@ -1,0 +1,13 @@
+Spotify (OZONE) | $HOME/.local/share/spotify-launcher/install/usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland 
+Dotfiles | ghostty --working-directory=$HOME/dotfiles
+Menu | ghostty -e bash -c "helix $HOME/dotfiles/hypr/script/custom-commands/menu"
+Clear cliphist | ghostty -e "$HOME/dotfiles/hypr/script/clear-cliphist.sh"
+vmrestart | ghostty -e sudo bash -c "$HOME/dotfiles/hypr/script/confirm.sh 'modprobe -v vmmon; modprobe vmnet; systemctl start vmware-networks.service; systemctl start vmtoolsd.service'"
+ddcutil-5 | ddcutil setvcp 10 5
+dductil-9 | ddcutil setvcp 10 9
+docker-daemon | ghostty -e sudo bash -c "$HOME/dotfiles/hypr/script/confirm.sh 'systemctl start docker'"
+ollama-daemon | ghostty -e sudo bash -c "$HOME/dotfiles/hypr/script/confirm.sh 'systemctl start ollama'"
+sshd | ghostty -e sudo bash -c "$HOME/dotfiles/hypr/script/confirm.sh 'systemctl start sshd'"
+reload-waybar | pkill waybar; sleep 0.2; waybar & disown
+pulsemixer | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e pulsemixer\""
+nmtui | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e nmtui\""
