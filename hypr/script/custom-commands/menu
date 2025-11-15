@@ -3,8 +3,6 @@ Dotfiles | ghostty --working-directory=$HOME/dotfiles
 Menu | ghostty --working-directory=$HOME/dotfiles/hypr/script/custom-commands -e bash -c "helix $HOME/dotfiles/hypr/script/custom-commands/menu"
 Clear cliphist | $HOME/dotfiles/hypr/script/float-confirm.sh -e rm -rf $HOME/.cache/cliphist/db
 vmrestart | $HOME/dotfiles/hypr/script/float-confirm.sh -e "sudo modprobe -v vmmon; sudo modprobe vmnet; sudo systemctl start vmware-networks.service; sudo systemctl start vmtoolsd.service"
-ddcutil-5 | ddcutil setvcp 10 5
-dductil-9 | ddcutil setvcp 10 9
 docker-daemon | $HOME/dotfiles/hypr/script/float-confirm.sh -e sudo systemctl start docker
 ollama-daemon | $HOME/dotfiles/hypr/script/float-confirm.sh -e sudo systemctl start ollama
 sshd | $HOME/dotfiles/hypr/script/float-confirm.sh -e sudo systemctl start sshd
