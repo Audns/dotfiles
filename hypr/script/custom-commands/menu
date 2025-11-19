@@ -8,4 +8,4 @@ ollama-daemon | $HOME/dotfiles/hypr/script/float-confirm.sh -e sudo systemctl st
 sshd | $HOME/dotfiles/hypr/script/float-confirm.sh -e sudo systemctl start sshd
 reload-waybar | pkill waybar; sleep 0.2; waybar & disown
 pulsemixer | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e pulsemixer\""
-nmtui | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e nmtui\""
+nmtui | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] kitty -e nmtui\""
