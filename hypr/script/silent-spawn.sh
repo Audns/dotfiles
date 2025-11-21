@@ -17,7 +17,7 @@ combined_menu() {
 
 # 1. Get the command
 SELECTED_CMD=$(combined_menu | \
-    fuzzel --dmenu --prompt="Silent Spawn > " \
+    fuzzel --dmenu --prompt="Silent> " \
     --config ~/.config/fuzzel/fuzzel.ini | \
     awk -F' \\| ' '{print $2}')
 
