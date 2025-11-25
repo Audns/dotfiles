@@ -10,6 +10,10 @@ args = ["start", "--stdio"]
 command = "golangci-lint"
 args = ["start", "--stdio"]
 
+[language-server.esbonio]
+command = "python3"
+args = ["-m", "esbonio"]
+
 [[language]]
 name = "latex"
 scope = "source.latex"
@@ -28,3 +32,10 @@ auto-format = true
 [language.formatter]
 command = "rustfmt"
 args = ["--emit=stdout"]
+
+[[language]]
+name = "rst"
+file-types = ["rst"]
+language-servers = ["esbonio"]
+indent = {tab-width = 4, unit = " "}
+auto-format = true
