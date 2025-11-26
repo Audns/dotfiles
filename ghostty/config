@@ -28,8 +28,8 @@ desktop-notifications = true
 alpha-blending = linear
 
 # Cursor styling
-cursor-style = "block"
-cursor-style-blink = false
+cursor-style = bar
+cursor-style-blink = true
 shell-integration-features = no-cursor
 shell-integration = fish
 
