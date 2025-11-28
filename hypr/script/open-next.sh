@@ -2,8 +2,7 @@
 # Get the highest workspace number currently in use
 get_next_workspace() {
     # Get all workspace IDs and find the highest one
-    local max_ws=$(hyprctl workspaces -j | jq -r '.[].id' | sort -n | tail -1)
-
+    local max_ws=$(hyprctl workspaces | grep "ID" | awk '{print $3}' | sort -n | tail -1)
     # If no workspaces found, start at 1, otherwise add 1 to max
     if [ -z "$max_ws" ]; then
         echo 1

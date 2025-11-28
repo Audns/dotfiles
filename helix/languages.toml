@@ -14,16 +14,25 @@ args = ["start", "--stdio"]
 command = "python3"
 args = ["-m", "esbonio"]
 
+[language-server.texlab]
+command = "texlab"
+args = ["run"]
+
+[language-server.texlab.config.forwardSearch]
+executable = "zathura"
+args = ["--synctex-forward", "%l:1:%f", "%p"]
+
 [[language]]
 name = "latex"
 scope = "source.latex"
+injection-regex = "tex"
 file-types = ["tex", "cls"]
-roots = []
-auto-format = true
-
-[language.formatter]
-command = "latexindent"
-args = ["-w", "-s", "--local"]
+roots = [".git", ".texlabroot"]
+comment-token = "%"
+language-servers = ["texlab"]
+indent = {tab-width = 2, unit = " "}
+formatter = {command = "latexindent", args = ["-"]}
+auto-format = false
 
 [[language]]
 name = "rust"
@@ -39,3 +48,10 @@ file-types = ["rst"]
 language-servers = ["esbonio"]
 indent = {tab-width = 4, unit = " "}
 auto-format = true
+
+[[language]]
+name = "yaml"
+file-types = ["yml", "yaml"]
+comment-token = "#"
+indent = {tab-width = 2, unit = " "}
+formatter = {command = "yamlfmt", args = ["-"]}
