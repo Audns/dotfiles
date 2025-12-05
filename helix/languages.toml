@@ -41,10 +41,7 @@ auto-format = false
 [[language]]
 name = "rust"
 auto-format = true
-
-[language.formatter]
-command = "rustfmt"
-args = ["--emit=stdout"]
+formatter = { command = "cargo fmt" }
 
 [[language]]
 name = "rst"
