@@ -26,6 +26,10 @@ args = ["--synctex-forward", "%l:1:%f", "%p"]
 command = "taplo"
 args = ["lsp", "stdio"]
 
+[language-server.mpls]
+command = "mpls"
+args = ["--dark-mode", "enable-emoji"]
+
 [[language]]
 name = "latex"
 scope = "source.latex"
@@ -41,13 +45,14 @@ auto-format = false
 [[language]]
 name = "rust"
 auto-format = true
-formatter = { command = "cargo fmt" }
+formatter = { command = "cargo fmt", args = [""] }
 
 [[language]]
 name = "rst"
 file-types = ["rst"]
 language-servers = ["esbonio"]
 indent = { tab-width = 4, unit = " " }
+formatter = { command = "rstfmt", args = ["-"] }
 auto-format = true
 
 [[language]]
@@ -66,4 +71,10 @@ auto-format = true
 name = "toml"
 language-servers = ["taplo"]
 formatter = { command = "tombi", args = ["format", "-"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "mpls"]
+formatter = { command = "rumdl", args = ["fmt", "-"] }
 auto-format = true
