@@ -1,8 +1,4 @@
 theme = "tokyonight"
-[editor.cursor-shape]
-normal = "block"
-insert = "bar"
-select = "underline"
 
 [editor]
 true-color = true
@@ -14,6 +10,12 @@ auto-format = true
 completion-timeout = 5
 completion-trigger-len = 1
 completion-replace = true
+idle-timeout = 400
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
