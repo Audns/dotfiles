@@ -1,6 +1,4 @@
 local.fish
-conf.d/
-functions/
 fish_variables
 fish_plugins
 local-menu

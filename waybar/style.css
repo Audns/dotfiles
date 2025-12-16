@@ -70,7 +70,7 @@ tooltip label {
 
 #workspaces button.active {
     color: @blue;
-    border-bottom: 2px solid @blue;
+    border-top: 2px solid @blue;
 }
 
 #workspaces button.urgent {
