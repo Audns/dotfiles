@@ -1,4 +1,4 @@
-#!/bin/bash
+# #!/bin/bash
 #
 # List of menu files to combine
 MENU_FILES=(
@@ -17,5 +17,5 @@ combined_menu() {
 combined_menu |
 	fuzzel --dmenu --prompt="Script> " \
 		--config ~/.config/fuzzel/fuzzel.ini |
-	awk -F' \\| ' '{print $2}' |
+	awk -F' \\| ' '{for(i=2;i<=NF;i++){printf "%s%s", $i, (i<NF?" | ":"")} print ""}' |
 	${SHELL:-/bin/bash}
