@@ -64,6 +64,7 @@ formatter = { command = "yamlfmt", args = ["-"] }
 
 [[language]]
 name = "bash"
+file-types = ["sh", "bash", "zsh", "conf", { glob = ".tmux.conf" }]
 formatter = { command = "shfmt", args = ["-"] }
 auto-format = true
 
@@ -75,6 +76,7 @@ auto-format = true
 
 [[language]]
 name = "markdown"
-language-servers = ["marksman", "mpls"]
+# language-servers = ["marksman", "mpls"]
+language-servers = ["marksman"]
 formatter = { command = "rumdl", args = ["fmt", "-"] }
 auto-format = true
