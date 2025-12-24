@@ -66,7 +66,7 @@ formatter = { command = "yamlfmt", args = ["-"] }
 name = "bash"
 file-types = ["sh", "bash", "zsh", "conf", { glob = ".tmux.conf" }]
 formatter = { command = "shfmt", args = ["-"] }
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "toml"

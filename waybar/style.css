@@ -57,7 +57,7 @@ tooltip label {
     padding: 0 16px;
     color: @gray;
     background: transparent;
-    transition: all 0.3s ease;
+    transition: all 0s ease;
     border-radius: 0px;
 }
 
@@ -67,11 +67,13 @@ tooltip label {
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: 0px;
+    transition: none;
 }
 
 #workspaces button.active {
     color: @blue;
     border-top: 2px solid @blue;
+    transition: none;
 }
 
 #workspaces button.urgent {
