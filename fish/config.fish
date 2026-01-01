@@ -9,6 +9,7 @@ starship init fish | source
 
 # Env
 set -gx XMODIFIERS @im=fcitx
+export AUDNS_DOT=$HOME/dotfiles
 export EDITOR=helix
 
 # Alias
