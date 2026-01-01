@@ -13,10 +13,22 @@
 @define-color cyan #7dcfff;
 @define-color white #a9b1d6;
 @define-color gray #565f89;
+@define-color yellow #e69d10;
+@define-color warn-yellow #deae52;
+
 
 /* -----------------------------------------------------------------------------
  * Global Styles
  * -------------------------------------------------------------------------- */
+
+* {
+    transition: none;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    animation: none;
+    animation-duration: 0s;
+    animation-delay: 0s;
+}
 
 window#waybar {
     background: rgba(26, 27, 38, 0);
@@ -59,6 +71,7 @@ tooltip label {
     background: transparent;
     transition: all 0s ease;
     border-radius: 0px;
+    transition: none;
 }
 
 #workspaces button:hover {
@@ -89,6 +102,8 @@ tooltip label {
 #network,
 #pulseaudio,
 #privacy,
+#battery,
+#backlight,
 #tray {
     padding: 0 3px;
     margin: 0 4px;
@@ -121,6 +136,18 @@ tooltip label {
 
 #privacy {
     color: @orange;
+}
+
+#battery.warning {
+    color: @orange;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#backlight {
+    color: @yellow;
 }
 
 #tray > .passive {

@@ -13,7 +13,9 @@
   "modules-right": [
     "tray",
     "network",
-    "pulseaudio"
+    "backlight",
+    "pulseaudio",
+    "battery"
   ],
   "privacy": {
     "icon-spacing": 4,
@@ -84,5 +86,12 @@
     "tooltip-format-ethernet": "{ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
     "tooltip-format-wifi": "{essid} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
     "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e impala\""
+  },
+  "backlight": {
+    "interval": 5,
+    "format": "BL: {percent}%",
+    "tooltip": true,
+    "tooltip-format": "Backlight: {percent}%",
+    "scroll-step": 0.5
   }
 }
