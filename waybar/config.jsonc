@@ -67,7 +67,7 @@
   "battery": {
     "interval": 3,
     "format": "Bty: {capacity}%",
-    "format-charging": "Bty(charging):{capacity}"
+    "format-charging": "Bty(charging):{capacity}%"
   },
   "clock": {
     "interval": 60,

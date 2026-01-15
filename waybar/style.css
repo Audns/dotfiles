@@ -15,6 +15,7 @@
 @define-color gray #565f89;
 @define-color yellow #e69d10;
 @define-color warn-yellow #deae52;
+@define-color purple #a02ccf;
 
 
 /* -----------------------------------------------------------------------------
@@ -144,6 +145,10 @@ tooltip label {
 
 #battery.critical {
     color: @red;
+}
+
+#battery.charging {
+    color: @purple;
 }
 
 #backlight {
