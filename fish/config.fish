@@ -24,3 +24,5 @@ alias cd='z'
 bind \ex prepend_proxychains4
 bind \eh 'commandline "helix ."; commandline -f execute'
 bind \et 'commandline "tmux"; commandline -f execute'
+bind \ef cds
+bind \eo cdo

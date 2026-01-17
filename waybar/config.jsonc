@@ -8,14 +8,15 @@
   ],
   "modules-center": [
     "privacy",
-    "clock"
+    "hyprland/window"
   ],
   "modules-right": [
     "tray",
     "network",
     "backlight",
     "pulseaudio",
-    "battery"
+    "battery",
+    "clock"
   ],
   "privacy": {
     "icon-spacing": 4,
@@ -60,14 +61,18 @@
     "format-muted": "Vol: muted",
     "format-source": "🎙️",
     "format-source-muted": "",
-    "scroll-step": 3,
+    "scroll-step": 0.3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e pulsemixer\""
   },
   "battery": {
     "interval": 3,
     "format": "Bty: {capacity}%",
-    "format-charging": "Bty(charging):{capacity}%"
+    "format-charging": "Bty(charging):{capacity}%",
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
   },
   "clock": {
     "interval": 60,
@@ -79,11 +84,11 @@
   "network": {
     "interval": 5,
     "format-wifi": "{ifname}: {signalStrength}%",
-    "format-ethernet": "Ethernet: {ifname}",
+    "format-ethernet": "Ethernet",
     "format-disconnected": "Disconnected",
     "tooltip": true,
     "tooltip-format": "{ifname}: {ipaddr}",
-    "tooltip-format-ethernet": "{ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "{ifname} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
     "tooltip-format-wifi": "{essid} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
     "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e impala\""
   },
@@ -92,6 +97,12 @@
     "format": "BL: {percent}%",
     "tooltip": true,
     "tooltip-format": "Backlight: {percent}%",
-    "scroll-step": 0.5
-  }
+    "scroll-step": 0.3
+  },
+  "hyprland/window": {
+        "format": "{title}",
+        "separate-outputs": true,
+        "max-length": 50,
+        "tooltip": false
+    }
 }
