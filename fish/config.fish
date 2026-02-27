@@ -11,6 +11,7 @@ starship init fish | source
 set -gx XMODIFIERS @im=fcitx
 export AUDNS_DOT=$HOME/dotfiles
 export EDITOR=helix
+export TERMINAL=ghostty
 
 # Alias
 alias pparu='proxychains4 -q paru'

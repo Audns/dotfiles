@@ -61,7 +61,7 @@
     "format-muted": "Vol: muted",
     "format-source": "🎙️",
     "format-source-muted": "",
-    "scroll-step": 0.3,
+    "scroll-step": 3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e pulsemixer\""
   },
@@ -70,8 +70,8 @@
     "format": "Bty: {capacity}%",
     "format-charging": "Bty(charging):{capacity}%",
     "states": {
-        "warning": 30,
-        "critical": 15
+      "warning": 30,
+      "critical": 15
     },
   },
   "clock": {
@@ -100,9 +100,9 @@
     "scroll-step": 0.3
   },
   "hyprland/window": {
-        "format": "{title}",
-        "separate-outputs": true,
-        "max-length": 50,
-        "tooltip": false
-    }
+    "format": "{title}",
+    "separate-outputs": true,
+    "max-length": 50,
+    "tooltip": false
+  }
 }

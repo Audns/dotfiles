@@ -7,14 +7,14 @@ function cdo --description "fzf into a file with improved GUI launching"
     end
 
     # set -l file ($fd_cmd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always --line-range :500 {} 2>/dev/null || file {}')
-    set -l file ($fd_cmd --type f --hidden --exclude .git --exclude .venv --exclude .cache --exclude .cargo --exclude .bun | fzf --reverse)
+    set -l file ($fd_cmd --type f --hidden --exclude .git --exclude .venv --exclude .cache --exclude .cargo --exclude .bun --exclude .java | fzf --reverse)
 
     if test -n "$file"
         set -l ext (string lower (string split -r -m1 . $file)[-1])
 
         switch $ext
             # Documents / Code
-            case conf txt md py sh fish js json rs cpp c h
+            case conf txt md py sh fish js json rs cpp c h toml yaml
                 $EDITOR $file
 
                 # PDF
@@ -31,7 +31,7 @@ function cdo --description "fzf into a file with improved GUI launching"
                 nohup mpv "$file" >/dev/null 2>&1 &
 
                 # Documents
-            case docx pptx odt xlsx
+            case docx pptx odt xlsx doc
                 nohup libreoffice "$file" >/dev/null 2>&1 &
                 # Fallback
             case '*'
