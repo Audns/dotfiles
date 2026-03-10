@@ -5,7 +5,6 @@ Clear cliphist | $HOME/dotfiles/hypr/script/float-confirm.sh -e rm -rf $HOME/.ca
 vmrestart | $HOME/dotfiles/hypr/script/float-confirm.sh -e "sudo modprobe -v vmmon; sudo modprobe vmnet; sudo systemctl start vmware-networks.service; sudo systemctl start vmtoolsd.service"
 reload-waybar | pkill waybar; sleep 0.2; waybar & disown
 pulsemixer | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e pulsemixer\""
-nmtui | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] kitty -e nmtui\""
 impala | $HOME/dotfiles/hypr/script/float-window.sh ghostty -e impala
 makohistory | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e bash -c 'makoctl history | helix'\""
 iwconfig | bash -c "hyprctl dispatch exec \"[float; size 1800 1100; center] ghostty -e watch -n 2 iwconfig\""
