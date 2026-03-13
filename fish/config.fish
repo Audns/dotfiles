@@ -20,6 +20,7 @@ alias ls='eza --color=always --icons=always --group-directories-first'
 alias ip='ip -c'
 alias hx='helix'
 alias cd='z'
+alias tree='tree -C'
 
 # Binding
 bind \ex prepend_proxychains4
