@@ -9,7 +9,8 @@ tabbar tabbox tab {
 }
 
 tabbar tabbox tab:selected {
-    background-color: #2a2f4a;
+    /* background-color: #2a2f4a; */
+    background-color: #27283b;
     color: #a9b1d6;
     font-weight: bold;
 }
