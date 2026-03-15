@@ -7,7 +7,7 @@ reload-waybar | pkill waybar; sleep 0.2; waybar & disown
 pulsemixer | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e pulsemixer\""
 impala | $HOME/dotfiles/hypr/script/float-window.sh ghostty -e impala
 makohistory | bash -c "hyprctl dispatch exec \"[float; size 1500 1000; center] ghostty -e bash -c 'makoctl history | helix'\""
-iwconfig | bash -c "hyprctl dispatch exec \"[float; size 1800 1100; center] ghostty -e watch -n 2 iwconfig\""
+iwconfig | bash -c "hyprctl dispatch exec \"[float; size 1800 1100; center] ghostty -e watch -n 1 iwconfig\""
 Screenshots | thunar $HOME/Pictures/Screenshots
 powerprofile1 balance | powerprofilesctl set balanced; notify-send "PowerProfile" "Balance"
 powerprofile0 power-saver | powerprofilesctl set power-saver; notify-send "PowerProfile" "power-saver"

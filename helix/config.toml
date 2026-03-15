@@ -38,6 +38,10 @@ left = ["mode", "spinner", "version-control", "file-name"]
 [editor.lsp]
 display-progress-messages = true
 
+[keys.normal]
+"A-r" = [":reload-all", ":echo 'Files Reloaded'"]
+"A-t" = [":reload-all", ":sh nohup ghostty > /dev/null 2>&1"]
+
 [keys.insert]
 "A-n" = "normal_mode"
 "A-l" = "move_char_right"
