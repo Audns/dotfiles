@@ -41,3 +41,8 @@ copy-on-select = true
 
 # SSH session terminfo
 shell-integration-features = ssh-env
+
+gtk-custom-css = /home/audns/dotfiles/ghostty/tab-style.css
+
+keybind = ctrl+shift+l=next_tab
+keybind = ctrl+shift+h=previous_tab

@@ -1,0 +1,23 @@
+tabbar tabbox {
+    background-color: #1a1b26;
+}
+
+tabbar tabbox tab {
+    color: #444b6a;
+    border-right: 1px solid #24283b;
+    font-weight: bold
+}
+
+tabbar tabbox tab:selected {
+    background-color: #2a2f4a;
+    color: #a9b1d6;
+    font-weight: bold;
+}
+
+tabbar tabbox tab label {
+    font-size: 18px;
+}
+
+headerbar {
+    background-color: #1a1b26;
+}
