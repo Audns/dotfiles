@@ -4,12 +4,10 @@ tabbar tabbox {
 
 tabbar tabbox tab {
     color: #444b6a;
-    border-right: 1px solid #24283b;
     font-weight: bold
 }
 
 tabbar tabbox tab:selected {
-    /* background-color: #2a2f4a; */
     background-color: #27283b;
     color: #a9b1d6;
     font-weight: bold;
