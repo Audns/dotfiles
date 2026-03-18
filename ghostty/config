@@ -44,5 +44,12 @@ shell-integration-features = ssh-env
 
 gtk-custom-css = /home/audns/dotfiles/ghostty/tab-style.css
 
+unfocused-split-opacity = 1.0
+
+# Key bindings
 keybind = ctrl+shift+l=next_tab
 keybind = ctrl+shift+h=previous_tab
+keybind = alt+shift+h=goto_split:left
+keybind = alt+shift+j=goto_split:down
+keybind = alt+shift+k=goto_split:up
+keybind = alt+shift+l=goto_split:right
