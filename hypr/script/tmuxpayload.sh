@@ -35,7 +35,8 @@ if [ ! -s "$TEMP_LIST" ]; then
 	exit 1
 fi
 # Show the combined list in fuzzel
-SELECTED=$(cat "$TEMP_LIST" | fuzzel -d -p "Tmux>" --config ~/.config/fuzzel/fuzzel.ini)
+# SELECTED=$(cat "$TEMP_LIST" | fuzzel -d -p "Tmux>" --config ~/.config/fuzzel/fuzzel.ini)
+SELECTED=$(cat "$TEMP_LIST" | luncher)
 # Clean up temp file
 rm "$TEMP_LIST"
 # Check if user selected something

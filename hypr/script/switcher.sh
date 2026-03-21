@@ -12,7 +12,8 @@ fi
 
 formatted_list=$(echo "$window_list" | awk -F"$DELIM" '{printf "%s: %s - %s\n", $1, $3, $2}')
 
-selected=$(echo "$formatted_list" | fuzzel --dmenu --prompt="Window>")
+# selected=$(echo "$formatted_list" | fuzzel --dmenu --prompt="Window>")
+selected=$(echo "$formatted_list" | luncher)
 
 if [ -z "$selected" ]; then
 	exit 0
