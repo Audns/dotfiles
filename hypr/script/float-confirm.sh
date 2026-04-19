@@ -81,4 +81,4 @@ SCRIPT_END
 chmod +x "$TEMP_SCRIPT"
 
 # Execute the confirmation script in a floating terminal window
-hyprctl dispatch exec "[float; size $SIZE; $POSITION] ghostty -e bash -c '$TEMP_SCRIPT; rm $TEMP_SCRIPT'"
+hyprctl dispatch "hl.dsp.exec_cmd(\"[float; size $SIZE; $POSITION] ghostty -e bash -c '$TEMP_SCRIPT; rm $TEMP_SCRIPT'\")"

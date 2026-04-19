@@ -51,4 +51,4 @@ fi
 COMMAND="$*"
 
 # Execute with hyprctl
-hyprctl dispatch exec "[float; size $SIZE; $POSITION] $COMMAND"
+hyprctl dispatch "hl.dsp.exec_cmd(\"[float; size $SIZE; $POSITION] $COMMAND\")"

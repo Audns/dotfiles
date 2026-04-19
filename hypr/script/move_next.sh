@@ -1,3 +1,3 @@
 #!/bin/bash
 current=$(hyprctl activeworkspace -j | jq '.id')
-hyprctl dispatch movetoworkspace $((current + 1))
+hyprctl dispatch "hl.dsp.window.move({workspace = $((current + 1))})"

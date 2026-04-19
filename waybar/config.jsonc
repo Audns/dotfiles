@@ -63,7 +63,7 @@
     "format-source-muted": "",
     "scroll-step": 3,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e pulsemixer\""
+    "on-click-middle": "hyprctl dispatch 'hl.dsp.exec_cmd(\"[float; size 1500 1000; center] $TERMINAL -e pulsemixer\")'"
   },
   "battery": {
     "interval": 3,
@@ -72,11 +72,11 @@
     "states": {
       "warning": 30,
       "critical": 15
-    },
+    }
   },
   "clock": {
     "interval": 60,
-    "format": "{:%a, %b%d, %H:%M}",
+    "format": "{:%a %b%d %H:%M}",
     "tooltip": false,
     "return-type": "json",
     "escape": true
@@ -90,7 +90,7 @@
     "tooltip-format": "{ifname}: {ipaddr}",
     "tooltip-format-ethernet": "{ifname} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
     "tooltip-format-wifi": "{essid} | {ipaddr} | DN: {bandwidthDownBytes} UP: {bandwidthUpBytes}",
-    "on-click-middle": "hyprctl dispatch exec \"[float; size 1500 1000; center] $TERMINAL -e impala\""
+    "on-click-middle": "hyprctl dispatch 'hl.dsp.exec_cmd(\"[float; size 1500 1000; center] $TERMINAL -e impala\")'"
   },
   "backlight": {
     "interval": 5,
@@ -98,6 +98,12 @@
     "tooltip": true,
     "tooltip-format": "Backlight: {percent}%",
     "scroll-step": 0.3
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e-1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e+1\"})'",
+    "sort-by-number": true
   },
   "hyprland/window": {
     "format": "{title}",

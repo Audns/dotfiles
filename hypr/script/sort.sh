@@ -1,45 +1,27 @@
-#!/usr/bin/env bash
-# compact-workspaces.sh
-# Compacts Hyprland workspaces by filling gaps, moving windows by actual workspace ID.
-# e.g. workspaces 1, 3, 4, 5  →  1, 2, 3, 4
+#!/bin/bash
 
-set -euo pipefail
+# Get occupied workspace IDs sorted
+mapfile -t OCCUPIED < <(hyprctl workspaces -j | jq '[.[].id | select(. > 0)] | sort[]')
 
-# Get all occupied workspace IDs, sorted numerically, excluding special workspaces (negative IDs)
-mapfile -t workspaces < <(
-    hyprctl workspaces -j \
-    | jq '[.[] | select(.id > 0) | .id] | sort[]'
-)
+[[ ${#OCCUPIED[@]} -le 1 ]] && { hyprctl dispatch 'hl.dsp.exec_raw("notify-send Hyprland \"Already compact\" -t 2000")'; exit; }
 
-# Nothing to do if 0 or 1 workspace
-if (( ${#workspaces[@]} <= 1 )); then
-    exit 0
-fi
+# Get active workspace id
+ACTIVE=$(hyprctl activeworkspace -j | jq '.id')
+NEW_ACTIVE=$ACTIVE
+TARGET=1
 
-# Remember which workspace is currently active so we can follow it
-active_ws=$(hyprctl activeworkspace -j | jq '.id')
+for OLD_ID in "${OCCUPIED[@]}"; do
+    if (( OLD_ID != TARGET )); then
+        # Move all windows on OLD_ID to TARGET
+        hyprctl clients -j \
+            | jq -r ".[] | select(.workspace.id == $OLD_ID) | .address" \
+            | while read -r ADDR; do
+                hyprctl dispatch "hl.dsp.window.move({workspace = $TARGET, window = \"address:$ADDR\"})"
+            done
 
-expected=1
-for ws in "${workspaces[@]}"; do
-    if (( ws != expected )); then
-        # Get all window addresses on this workspace
-        mapfile -t windows < <(
-            hyprctl clients -j \
-            | jq -r --argjson ws "$ws" '.[] | select(.workspace.id == $ws) | .address'
-        )
-
-        # Move each window to the target workspace ID
-        for addr in "${windows[@]}"; do
-            hyprctl dispatch movetoworkspacesilent "$expected,address:$addr"
-        done
-
-        # Track where the active workspace ended up
-        if (( ws == active_ws )); then
-            active_ws=$expected
-        fi
+        (( OLD_ID == ACTIVE )) && NEW_ACTIVE=$TARGET
     fi
-    (( expected++ ))
+    (( TARGET++ ))
 done
 
-# Switch to wherever the originally active workspace moved to
-hyprctl dispatch workspace "$active_ws"
+hyprctl dispatch "hl.dsp.focus({workspace = $NEW_ACTIVE})"

@@ -30,6 +30,10 @@ args = ["lsp", "stdio"]
 command = "mpls"
 args = ["--dark-mode", "enable-emoji"]
 
+[language-server.lua-language-server]
+command = "lua-language-server"
+args = ["--configpath", "~/.config/hypr/.luarc.json"]
+
 [[language]]
 name = "latex"
 scope = "source.latex"
@@ -80,3 +84,7 @@ name = "markdown"
 language-servers = ["marksman"]
 formatter = { command = "rumdl", args = ["fmt", "-"] }
 auto-format = true
+
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"]
