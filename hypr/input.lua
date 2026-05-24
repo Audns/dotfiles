@@ -13,3 +13,9 @@ hl.config {
     ["input.touchpad.scroll_factor"] = 0.3,
     ["input.touchpad.disable_while_typing"] = true,
 }
+
+hl.gesture({
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace",
+})
