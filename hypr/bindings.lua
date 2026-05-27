@@ -41,6 +41,7 @@ hl.bind("SUPER + SHIFT + C", hl.dsp.window.kill())
 hl.bind("SUPER + E", hl.dsp.focus({workspace = "previous"}))
 hl.bind("SUPER + F", hl.dsp.exec_cmd("luncher -m launcher"))
 hl.bind("SUPER + G", hl.dsp.exec_cmd(dotfiles .. "/hypr/script/tmuxpayload.sh"))
+hl.bind("SUPER + I", hl.dsp.exec_cmd("chopsticks"))
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({
   mode = "maximized",
   action = "toggle",
