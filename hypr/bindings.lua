@@ -35,6 +35,7 @@ end)
 
 hl.bind("SUPER + A", hl.dsp.focus({ workspace = "empty" }))
 hl.bind("SUPER + SHIFT + A", hl.dsp.window.move({workspace = "empty"}))
+hl.bind("SUPER + ALT + A", hl.dsp.exec_cmd(dotfiles .. "/hypr/script/insert_next.sh"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-browser"))
 hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + C", hl.dsp.window.kill())

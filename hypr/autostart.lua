@@ -2,7 +2,7 @@
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("hyprpaper")
-  hl.exec_cmd("~/second/codespace/simple_project/Waybar/build/waybar")
+  hl.exec_cmd("~/second/codespace/Waybar/build/waybar")
   hl.exec_cmd("rustbox start")
   hl.exec_cmd("mako")
   hl.exec_cmd("fcitx5")

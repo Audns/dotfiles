@@ -34,6 +34,10 @@ args = ["--dark-mode", "enable-emoji"]
 command = "lua-language-server"
 args = ["--configpath", "~/.config/hypr/.luarc.json"]
 
+[language-server.biome]
+command = "biome"
+ars = ["lsp-proxy"]
+
 [[language]]
 name = "latex"
 scope = "source.latex"
@@ -88,3 +92,13 @@ auto-format = true
 [[language]]
 name = "lua"
 language-servers = ["lua-language-server"]
+
+[[language]]
+name = "typescript"
+file-types = ["js", "tsx", "jsx", "ts"]
+language-servers = [
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome"
+]
+auto-format = true
+roots = ["biome.json", "biome.jsonc", "package.json"]
